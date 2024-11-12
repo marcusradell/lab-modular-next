@@ -1,7 +1,6 @@
 import { Message } from "./types";
 
 export function createRepository() {
-  // eslint-disable-next-line prefer-const
   let data: Message[] = [];
 
   return {
