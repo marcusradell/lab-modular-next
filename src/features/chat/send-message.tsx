@@ -9,5 +9,9 @@ export function SendMessage() {
     await sendMessageAction({ content: "Hi!" });
   }
 
-  return <button onClick={onSendMessage}>Send</button>;
+  return (
+    <button className="btn btn-primary" onClick={onSendMessage}>
+      Send
+    </button>
+  );
 }

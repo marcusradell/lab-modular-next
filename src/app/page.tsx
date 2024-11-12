@@ -1,5 +1,10 @@
 import { Chat } from "@/features";
 
 export default function Home() {
-  return <Chat />;
+  return (
+    <>
+      <h1>Chat</h1>
+      <Chat />
+    </>
+  );
 }
