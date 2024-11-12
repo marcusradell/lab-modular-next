@@ -1,10 +1,12 @@
 "use client";
 
-import { chatFeature } from "./instance";
+import { sendMessageAction } from "./actions";
 
 export function SendMessage() {
   async function onSend() {
-    await chatFeature.service.sendMessage({ content: "Hi!" });
+    console.log("Inside onSend");
+
+    await sendMessageAction({ content: "Hi!" });
   }
 
   return <button onClick={onSend}>Send</button>;
