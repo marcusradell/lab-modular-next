@@ -1,7 +1,15 @@
+import { Message } from "./types";
+
 export function createRepository() {
+  // eslint-disable-next-line prefer-const
+  let data: Message[] = [];
+
   return {
     async getAllMessages() {
-      return [];
+      return data;
+    },
+    async sendMessage(message: Message) {
+      data.push(message);
     },
   };
 }

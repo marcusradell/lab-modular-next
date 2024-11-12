@@ -1,7 +1,15 @@
-import { createChatFeature } from ".";
+"use server";
+
+import { chatFeature } from "./instance";
+import { SendMessage } from "./send-message";
 
 export async function Chat() {
-  const messages = await createChatFeature().service.getAllMessages();
+  const messages = await chatFeature.service.getAllMessages();
 
-  return <div>Messages: {JSON.stringify(messages, null, 2)}</div>;
+  return (
+    <>
+      <SendMessage />
+      <div>Messages: {JSON.stringify(messages, null, 2)}</div>
+    </>
+  );
 }
